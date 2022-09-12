@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "OdinFont";
+  src: url("/assets/fonts/Norse-Bold.otf") format("opentype");
+}
+
+* {
+  box-sizing: content-box;
+}
+
+:root {
+  --white-font-color: #ffffff;
+  --white-background-color: #ffffff;
+  --dark-background-color: #000000;
+  --submit-background-color: #586f49;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+body {
+  display: flex;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+  max-width: 1600px;
+  margin: auto;
+}
+
+aside {
+  flex: 1 0.5 250px;
+  position: relative;
+  background-image: url("/assets/img/halie-west-25xggax4bSA-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+  min-width: 250px;
+  color: var(--white-font-color);
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "OdinFont";
+  gap: 0.2em;
+  font-size: 4.5rem;
+  background-color: rgba(0, 0, 0, 0.39);
+  width: 100%;
+  top: 20%;
+  height: 2em;
+}
+
+.odin-logo {
+  height: 1.6em;
+  width: auto;
+}
+
+.photo-credits {
+  position: absolute;
+  text-align: center;
+  font-size: 0.8rem;
+  bottom: 0%;
+  width: 100%;
+}
+
+.photo-credits > p > a,
+.photo-credits > p > a :visited {
+  color: var(--white-font-color);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 65%;
+  min-width: 300px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  min-width: 35%;
+}
+
+.form-group > label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.form-group > input {
+  padding: 0.4em;
+  border-radius: 0.3em;
+  border: 1px solid rgba(128, 128, 128, 0.377);
+  width: 14em;
+  text-indent: 0.2em;
+}
+
+.form-group > input:valid {
+  border-color: rgba(0, 128, 0, 0.562);
+}
+
+.form-group > input:invalid {
+  border-color: rgba(255, 0, 0, 0.61);
+}
+
+.form-group > input :required {
+  border-color: rgba(0, 255, 128, 0.61);
+}
+
+.form-group > input::placeholder {
+  color: rgba(128, 128, 128, 0.801);
+}
+
+.form-footer {
+  margin-top: 2em;
+}
+
+.form-footer > input {
+  border: inherit;
+  padding: 0.5em;
+  width: 10em;
+  border-radius: 10px;
+  background-color: var(--submit-background-color);
+  color: var(--white-font-color);
+}
+
+.form-footer > input:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+}
